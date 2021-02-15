@@ -1,0 +1,72 @@
+body{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(122,23,39,1) 17%, rgba(47,18,18,1) 94%);
+  font-family: 'Staatliches', cursive;
+}
+
+.title{
+  color: white;
+  text-align: center;
+}
+
+.title a{
+  background: #808080;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.title a img{
+  margin: auto;
+  width: 25px;
+  color: white;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content:  space-around;
+}
+
+.dial{
+  padding: 5px;
+  width: 200;
+  height: 200;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+.linear canvas{
+  border-radius: 13px;
+  border: #f4f4f4 2px solid;
+  box-shadow: 0 0 0 2px #CCC;
+}
+
+.control_button{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: #3e1216;
+  margin: auto;
+  border: #f4f4f4 2px solid;
+  box-shadow: 0 0 0 2px #CCC;
+  color:white;
+  line-height: 100px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: grab;
+}
+
+.light{
+  height:20px;
+  width: 20px;
+  border-radius: 10px;
+  margin: auto;
+  border: #f4f4f4 1px solid;
+  box-shadow: 0 0 0 2px #CCC;
+  background: black;
+}

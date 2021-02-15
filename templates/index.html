@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Car Dashboard</title>
+    <script src="{{ url_for('static', filename='js/gauge.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/socketio.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="title">
+      <a href="https://sebsite.xyz">
+        <img src="{{ url_for('static', filename='images/small_logo.png') }}"/>
+      </a>
+      
+      <p>Using <a href="https://github.com/miguelgrinberg/Flask-SocketIO">Flask SocketIO</a>, <a href="https://github.com/brendan-w/python-OBD">OBD</a> and <a href="https://canvas-gauges.com/">CanvasGauges</a></p>
+    </div>
+
+    <div class="container controls">
+      <div class="light"></div>
+      <div class="light"></div>
+
+      <div class="control_button">
+        Start/Stop
+      </div>
+
+      <div class="light"></div>
+      <div class="light"></div>
+    </div>
+
+
+  <div class="container">
+    {% include 'dials/rpm.html' %}
+    {% include 'dials/speed.html' %}
+    {% include 'dials/engine_load.html' %}
+    {% include 'dials/intake_pressure.html' %}
+  </div>
+
+  <div class="container linear">
+    {% include 'dials/coolant_temp.html' %}
+    {% include 'dials/intake_temp.html' %}
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
